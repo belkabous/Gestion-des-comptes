@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dynamic Table</title>
+</head>
+<body>
+
+    <h1>challenge 17</h1>
+
+<table id="myTable"></table>
+
+<script>
+const data = [
+  { name: "John Doe", age: 30, city: "New York" },
+  { name: "Jane Smith", age: 25, city: "Los Angeles" },
+  { name: "David Lee", age: 35, city: "Chicago" }
+];
+
+const table = document.getElementById('myTable');
+
+// Create table header row
+const headerRow = table.insertRow();
+for (const key in data[0]) {
+  const cell = headerRow.insertCell();
+  cell.innerHTML = key;
+}
+
+// Create data rows
+data.forEach(row => {
+  const newRow = table.insertRow();
+  for (const key in row) {
+    const cell = newRow.insertCell();
+    cell.innerHTML = row[key];
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>challenge 12</h1>
+<select id="mySelect"></select>
+
+<script>
+const myArray = ["Option 1", "Option 2", "Option 3", "Option 4"];
+
+const selectElement = document.getElementById('mySelect');
+
+for (const optionText of myArray) {
+  const option = document.createElement('option');
+  option.value = optionText;
+  option.text = optionText;
+  selectElement.appendChild(option);
+}
+</script>
+
+</body>
+</html>

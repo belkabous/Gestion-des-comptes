@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scroll to Element</title>
+</head>
+<body>
+
+<h1>challenge 15</h1>
+
+
+<button onclick="scrollToElement('myElement')">Scroll to Element</button>
+
+<p>Some content</p>
+<p>Some more content</p>
+
+<div id="myElement">
+  <h2>Target Element</h2>
+</div>
+
+<p>Even more content</p>
+
+<script>
+function scrollToElement(elementId) {
+  const element = document.getElementById(elementId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' }); 
+  } else {
+    console.error("Element with ID '" + elementId + "' not found.");
+  }
+}
+</script>
+
+</body>
+</html>
